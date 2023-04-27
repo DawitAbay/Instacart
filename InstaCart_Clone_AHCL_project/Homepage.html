@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="grocery/grocery.css" />
+    <link rel="stylesheet" href="grocery/navbar.css" />
+    <link rel="stylesheet" href="homePage/index.css" />
+    <script
+      src="https://kit.fontawesome.com/dbf8e14211.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Sprouts Farmers Markets Delicery</title>
+    <script src="homePage/script.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar_left">
+        <div class="menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <div class="navLogo">
+          <img
+            src="https://www.instacart.com/image-server/240x48/www.instacart.com/assets/beetstrap/brand/2022/instacart-logo-color@3x-6b71df83cfba8c6827f59bff009df3be6e96d484ebdc5da7e6122e9555eae9b6.png"
+            alt=""
+          />
+        </div>
+        <div class="allStore">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="#72767E"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            size="12"
+            color="systemGrayscale50"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7.121 12l5.94-5.94a1.5 1.5 0 00-2.122-2.12l-7 7a1.5 1.5 0 000 2.12l7 7a1.5 1.5 0 002.122-2.12L7.12 12z"
+            ></path>
+          </svg>
+          <span>All stores</span>
+        </div>
+      </div>
+      <div class="searchBar">
+        <input type="text" />
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+      <div class="navbar_right">
+        <div class="deliveryBtn">
+          Pickup
+          <div>Delivery</div>
+        </div>
+        <div class="pickup">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="#343538"
+            xmlns="http://www.w3.org/2000/svg"
+            size="24"
+            class="css-1an9ecb-AddressButton"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M14.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm-2.899 3h.378a1.494 1.494 0 01.87.263l4.483 2.989a1.5 1.5 0 01-1.664 2.496L13.5 12.303v1.314l2.817 5.165a1.5 1.5 0 01-2.634 1.436l-2.158-3.956-.026-.047-.999-1.832v-.023l-.774-1.437a3 3 0 01-.352-1.625l.023-.208A2.005 2.005 0 008 13l-.007.145A1.5 1.5 0 015 13.001a5.004 5.004 0 015.004-5.004H11.5c.034 0 .068 0 .101.003zm-.875 10.463c-.276.622-.59 1.224-.94 1.809a1.5 1.5 0 11-2.572-1.544 13.818 13.818 0 001.57-3.825l1.942 3.56z"
+            ></path>
+          </svg>
+          Delivery at 25 Park Place
+        </div>
+        <div class="readyBy8">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="#343538"
+            xmlns="http://www.w3.org/2000/svg"
+            size="24"
+            color="systemGrayscale70"
+            class="css-1uiiq64-ServiceEta"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M21.5 12a9.5 9.5 0 11-19 0 9.5 9.5 0 0119 0zM12 5.5A1.5 1.5 0 0113.5 7v4.379l3.06 3.06a1.5 1.5 0 11-2.12 2.122l-3.5-3.5A1.5 1.5 0 0110.5 12V7A1.5 1.5 0 0112 5.5z"
+            ></path>
+          </svg>
+          Ready by 6:00pm
+        </div>
+        <button id="loginBtn">
+          <i class="fa fa-user-o" aria-hidden="true"></i>
+        </button>
+        <div class="cart">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <span id="cart_item_count">0</span>
+        </div>
+      </div>
+    </div>
+    <!-- wall begins  -->
+
+    <div class="wall">
+      <div class="desc">
+        <p class="heading">Order groceries for delivery or pickup today</p>
+        <p>Whatever you want from local stores, brought right to your door.</p>
+      </div>
+      <div class="wallimg">
+        <img class="bgtop" src="homePage/bgtop.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-- wall ends  -->
+    <div class="storeSelection">
+      <p>Your Favorite Stores <span>Atlanta, Georgia Area</span></p>
+    </div>
+    <div class="container">
+      <div id="favoritesContainer">
+        <!-- This is where your favorite items will be displayed -->
+      </div>
+    </div>
+
+    <!-- grid starts here -->
+    <!-- wall ends  -->
+    <div class="storeSelection">
+      <p>Choose your store in <span>Atlanta, Georgia Area</span></p>
+    </div>
+    <div class="grid">
+      <div class="gridData">
+        <div class="gridimg">
+          <img
+            src="https://www.instacart.com/image-server/58x58/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/warehouse/logo/279/0d43b5d2-9d07-4a30-a0ee-0e16d5922411.png"
+            alt=""
+          />
+        </div>
+        <div class="griddesc" onclick="window.location.href='./grocery.html';">
+          <h4>Sprouts Farmers Market</h4>
+          <p>Delivery . Pickup 7.5mi</p>
+        </div>
+        <button class="favoriteBtn">
+          <i class="fa fa-heart"></i>
+        </button>
+      </div>
+      <div class="gridData">
+        <div class="gridimg">
+          <img
+            src="https://www.instacart.com/image-server/58x58/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/warehouse/logo/1/1fe0065e-a947-4b5d-b274-3900694536d5.png"
+            alt=""
+          />
+        </div>
+        <div class="griddesc">
+          <h4>Safeway</h4>
+          <p>Delivery vy 9:45pm</p>
+        </div>
+        <button class="favoriteBtn">
+          <i class="fa fa-heart"></i>
+        </button>
+      </div>
+      <div class="gridData">
+        <div class="gridimg">
+          <img
+            src="https://www.instacart.com/image-server/58x58/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/warehouse/logo/5/65f2304b-908e-4cd0-981d-0d4e4effa8de.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="griddesc"
+          onclick="window.location.href='./Costcopage.html';"
+        >
+          <h4>Costco</h4>
+          <p>Delivery</p>
+        </div>
+        <button class="favoriteBtn">
+          <i class="fa fa-heart"></i>
+        </button>
+      </div>
+      <div class="gridData">
+        <div class="gridimg">
+          <img
+            src="https://www.instacart.com/image-server/58x58/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/warehouse/logo/31/f889f29f-5d02-4e96-92d2-19c05e886ff6.png"
+            alt=""
+          />
+        </div>
+        <div class="griddesc">
+          <h4>Rainbow Grocery</h4>
+          <p>Delivery</p>
+        </div>
+        <button class="favoriteBtn">
+          <i class="fa fa-heart"></i>
+        </button>
+      </div>
+      <div class="gridData">
+        <div class="gridimg">
+          <img
+            src="https://www.instacart.com/image-server/58x58/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/warehouse/logo/1573/e04c8eaf-a180-4753-b651-8c4a1c81845c.png"
+            alt=""
+          />
+        </div>
+        <div class="griddesc">
+          <h4>Walgreens</h4>
+          <p>Delivery by 9:45pm</p>
+        </div>
+        <button class="favoriteBtn">
+          <i class="fa fa-heart"></i>
+        </button>
+      </div>
+      <div class="gridData">
+        <div class="gridimg">
+          <img
+            src="https://www.instacart.com/image-server/58x58/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/warehouse/logo/1239/fa662636-8cbe-4625-b4a8-e5a54cc647bc.png"
+            alt=""
+          />
+        </div>
+        <div class="griddesc">
+          <h4>Woodlands</h4>
+          <p>Delivery</p>
+        </div>
+        <button class="favoriteBtn">
+          <i class="fa fa-heart"></i>
+        </button>
+      </div>
+      <div class="gridData">
+        <div class="gridimg">
+          <img
+            class="round"
+            src="https://www.instacart.com/image-server/58x58/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/warehouse/logo/115/9617cce6-ddc3-4f24-a705-d92b7c95e886.jpg"
+            alt=""
+          />
+        </div>
+        <div class="griddesc">
+          <h4>Mollie Stone's Markets</h4>
+          <p>Delivery</p>
+        </div>
+        <button class="favoriteBtn">
+          <i class="fa fa-heart"></i>
+        </button>
+      </div>
+      <div class="gridData">
+        <div class="gridimg">
+          <img
+            class="round"
+            src="https://www.instacart.com/image-server/58x58/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/warehouse/logo/180/485ab8a3-eadb-480e-9936-ca19c5777f10.png"
+            alt=""
+          />
+        </div>
+        <div class="griddesc">
+          <h4>Gus's Community Market</h4>
+          <p>Delivery</p>
+        </div>
+        <button class="favoriteBtn">
+          <i class="fa fa-heart"></i>
+        </button>
+      </div>
+      <div class="gridData">
+        <div class="gridimg">
+          <img
+            src="https://www.instacart.com/image-server/58x58/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/warehouse/logo/118/c7780a16-90f9-4596-b82b-af4121fe1ca0.png"
+            alt=""
+          />
+        </div>
+        <div class="griddesc">
+          <h4>CVS Pharmacy</h4>
+          <p>Delivery by 9:45pm</p>
+        </div>
+        <button class="favoriteBtn">
+          <i class="fa fa-heart"></i>
+        </button>
+      </div>
+      <div class="gridData">
+        <div class="gridimg">
+          <img
+            src="https://www.instacart.com/image-server/58x58/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/warehouse/logo/220/fba1c010-69bd-4fd2-9d51-031a8cbe2965.png"
+            alt=""
+          />
+        </div>
+        <div class="griddesc">
+          <h4>BevMo!</h4>
+          <p>Delivery</p>
+        </div>
+        <button class="favoriteBtn">
+          <i class="fa fa-heart"></i>
+        </button>
+      </div>
+      <div class="gridData">
+        <div class="gridimg">
+          <img
+            src="https://www.instacart.com/image-server/58x58/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/warehouse/logo/29/1fbf3168-c654-4f7d-864f-7a615a041346.jpg"
+            alt=""
+          />
+        </div>
+        <div class="griddesc">
+          <h4>Bi-Rite Market</h4>
+          <p>Delivery . Pickup 2.6mi</p>
+        </div>
+        <button class="favoriteBtn">
+          <i class="fa fa-heart"></i>
+        </button>
+      </div>
+      <div class="gridData">
+        <div class="gridimg">
+          <img
+            src="https://www.instacart.com/image-server/58x58/filters:fill(FFF,true):format(webp)/www.instacart.com/assets/domains/warehouse/logo/542/930560f2-a134-496c-a71b-99984d9bfa52.png"
+            alt=""
+          />
+        </div>
+        <div class="griddesc">
+          <h4>Lucky Supermarkets</h4>
+          <p>Delivery . Pickup 9.2mi</p>
+        </div>
+        <button class="favoriteBtn">
+          <i class="fa fa-heart"></i>
+        </button>
+      </div>
+    </div>
+    <script>
+      // Get all the favorite buttons
+      const favoriteBtns = document.querySelectorAll(".favoriteBtn");
+
+      // Get the favorites container
+      const favoritesContainer = document.getElementById("favoritesContainer");
+
+      // Add event listener to each favorite button
+      favoriteBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const heartIcon = btn.querySelector("i");
+          heartIcon.classList.toggle("fa-heart");
+          heartIcon.classList.toggle("fa-heart-o");
+
+          const storeData = btn.closest(".gridData");
+          const storeImgSrc = storeData.querySelector(".gridimg img").src;
+
+          if (heartIcon.classList.contains("fa-heart")) {
+            const favoriteItem = storeData.cloneNode(true);
+
+            // Remove the favorite button from the favorite item
+            favoriteItem.querySelector(".favoriteBtn").remove();
+
+            favoritesContainer.appendChild(favoriteItem);
+          } else {
+            const favoriteItems =
+              favoritesContainer.querySelectorAll(".gridData");
+            favoriteItems.forEach((item) => {
+              if (item.querySelector(".gridimg img").src === storeImgSrc) {
+                favoritesContainer.removeChild(item);
+              }
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
